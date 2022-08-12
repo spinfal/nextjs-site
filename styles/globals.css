@@ -13,17 +13,24 @@
 
 html,
 body {
+  color: var(--color-text-primary);
+
   height: 100%;
   /* background-color: var(--color-primary); */
   background-image: url("https://cdn.spin.rip/r/bg2.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  color: var(--color-text-primary);
+
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+
   overflow-y: scroll;
   overflow-x: hidden;
+
+  animation: fadeInAnimation ease 1.8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .discord-container {
@@ -39,4 +46,15 @@ body {
 .discord-status {
   overflow-x: hidden;
   word-wrap: break-word;
+}
+
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
 }

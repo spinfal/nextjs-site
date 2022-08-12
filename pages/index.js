@@ -91,7 +91,7 @@ export default function Home() {
                     </div>
                     <div className='flex flex-col'>
                       <p className='text-sm'>by: <em className='select-text font-semibold'>{discord?.data?.spotify?.artist ? `${discord?.data?.spotify?.artist}` : ''}</em></p>
-                      <p className='text-sm'>on: <em className='select-text font-semibold'>{discord?.data?.spotify?.album ? `on: ${discord?.data?.spotify?.album}` : ''}</em></p>
+                      <p className='text-sm'>on: <em className='select-text font-semibold'>{discord?.data?.spotify?.album ? `${discord?.data?.spotify?.album}` : ''}</em></p>
                     </div>
                   </div>
                 </div>
