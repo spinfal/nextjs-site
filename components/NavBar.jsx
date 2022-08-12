@@ -37,12 +37,14 @@ export default function NavBar() {
                                     <img
                                         className='block lg:hidden h-8 w-auto'
                                         src='https://cdn.spin.rip/r/spinfal-S.png'
-                                        alt='Workflow'
+                                        alt='spinfal'
+                                        draggable='false'
                                     />
                                     <img
                                         className='hidden lg:block h-8 w-auto'
                                         src='https://cdn.spin.rip/r/spinfal.png'
-                                        alt='Workflow'
+                                        alt='spinfal'
+                                        draggable='false'
                                     />
                                 </div>
                                 <div className='hidden sm:block sm:ml-6'>
