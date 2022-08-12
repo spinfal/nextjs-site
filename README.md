@@ -1,3 +1,6 @@
+# HI THERE
+I'm still new at Next.js & React.js, so if you think that this code looks like shit it's because that it is. I didn't make this to be a template for others, but it isn't hard to modify and make your own.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
