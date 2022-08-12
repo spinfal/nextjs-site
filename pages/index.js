@@ -89,10 +89,10 @@ export default function Home() {
                     <div className='flex flex-row gap-2 items-center'>
                       <Link href={`https://open.spotify.com/track/${discord?.data?.spotify?.track_id ?? '4cOdK2wGLETKBW3PvgPWqT'}`}><a target='_blank' rel='noreferrer' className='italic font-semibold hover:text-green-400 transition duration-300 ease-in-out select-text' title={discord?.data?.spotify?.song}>{(discord?.data?.spotify?.song.length > 35) ? `${discord?.data?.spotify?.song.substring(0, 35)}...` : discord?.data?.spotify?.song ?? 'spin isn\'t listening to music rn'}</a></Link><ClipboardCopyIcon className='h-4 w-4 cursor-pointer hover:text-blue-400 transition duration-300 ease-in-out' onClick={() => navigator.clipboard.writeText(`https://open.spotify.com/track/${discord?.data?.spotify?.track_id ?? '4cOdK2wGLETKBW3PvgPWqT'}`).then(() => toast(`copied song link to clipboard!`, toastProps))} />
                     </div>
-                    <div className='flex flex-col'>
-                      <p className='text-sm'>by: <em className='select-text font-semibold'>{discord?.data?.spotify?.artist ? `${discord?.data?.spotify?.artist}` : ''}</em></p>
-                      <p className='text-sm'>on: <em className='select-text font-semibold'>{discord?.data?.spotify?.album ? `${discord?.data?.spotify?.album}` : ''}</em></p>
-                    </div>
+                    {discord?.data?.spotify?.artist && <div className='flex flex-col'>
+                      <p className='text-sm'>by: <em className='select-text font-semibold'>{discord?.data?.spotify?.artist}</em></p>
+                      <p className='text-sm'>on: <em className='select-text font-semibold'>{discord?.data?.spotify?.album}</em></p>
+                    </div>}
                   </div>
                 </div>
               </div>
