@@ -4,7 +4,8 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['cdn.spin.rip', 'cdn.discordapp.com', 'i.scdn.co']
-  }
+  },
+  basePath: 'my-site'
 }
 
 module.exports = nextConfig
