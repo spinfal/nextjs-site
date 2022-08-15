@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     domains: ['cdn.spin.rip', 'cdn.discordapp.com', 'i.scdn.co']
   },
-  basePath: 'my-site'
+  basePath: '/my-site'
 }
 
 module.exports = nextConfig
