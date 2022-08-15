@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
-    "deploy": "git config --global user.email \"public@spin.rip\" && git config --global user.name \"Spinfal\" && next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages",
+    "deploy": "git config --global user.email \"public@spin.rip\" && git config --global user.name \"Spinfal\" && next build && next export && touch out/.nojekyll && git add out/ -f && git commit -m \"Deploy\" && git pull && git subtree push --prefix out origin gh-pages",
     "start": "next start",
     "lint": "next lint"
   },
