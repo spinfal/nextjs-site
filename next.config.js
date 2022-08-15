@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['cdn.spin.rip', 'cdn.discordapp.com', 'i.scdn.co'],
+    unoptimized: true,
   }
 }
 
