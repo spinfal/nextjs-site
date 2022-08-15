@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import toast, { Toaster } from 'react-hot-toast'
 import { ClipboardCopyIcon } from '@heroicons/react/outline'
@@ -67,7 +68,7 @@ export default function Home() {
               <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
                 <div className='flex flex-col gap-6'>
                   <div className='flex justify-center'>
-                    <img src={`https://cdn.discordapp.com/avatars/${discord.data.discord_user.id}/${discord.data.discord_user.avatar}.${discord.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png'}?size=512`} width={128} height={128} className='rounded-full' draggable='false' alt='discord avatar' />
+                    <Image src={`https://cdn.discordapp.com/avatars/${discord.data.discord_user.id}/${discord.data.discord_user.avatar}.${discord.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png'}?size=512`} width={128} height={128} className='rounded-full' draggable='false' alt='discord avatar' />
                   </div>
                   <div className='flex justify-center'>
                     <p className='flex flex-row items-center gap-2 tracking-wider cursor-pointer select-text hover:text-blue-400 transition duration-300 ease-in-out' onClick={() => navigator.clipboard.writeText(`${discord.data.discord_user.username}#${discord.data.discord_user.discriminator}`).then(() => toast(`copied username to clipboard!`, toastProps))}>{`${discord.data.discord_user.username}#${discord.data.discord_user.discriminator}`} <ClipboardCopyIcon className='h-4 w-4 cursor-pointer' /></p>
@@ -81,7 +82,7 @@ export default function Home() {
               {/* spotify data */}
               <div className='flex basis-1/2 flex-col lg:flex-row p-6 gap-6 lg:gap-12 lg:p-12 spotify-container rounded-3xl hover:rounded-2xl transition-all duration-300 ease-in-out'>
                 <div className='flex items-center justify-center'>
-                  <img src={discord?.data?.spotify?.album_art_url ?? 'https://cdn.discordapp.com/emojis/995782125062205481.webp?size=96'} width={128} height={128} draggable='false' className='rounded-lg' title={discord?.data?.spotify?.album} alt='spotify album' />
+                  <Image src={discord?.data?.spotify?.album_art_url ?? 'https://cdn.discordapp.com/emojis/995782125062205481.webp?size=96'} width={128} height={128} draggable='false' className='rounded-lg' title={discord?.data?.spotify?.album} alt='spotify album' />
                 </div>
                 <div className='flex justify-center items-center'>
                   <div className='grid grid-cols-1 grid-rows-2 gap-6'>
