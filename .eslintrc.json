@@ -1,3 +1,37 @@
 {
-  "extends": "next/core-web-vitals"
+    "env": {
+        "node": true,
+        "browser": true,
+        "es6": true
+    },
+    "extends": "next/core-web-vitals",
+    "overrides": [],
+    "plugins": [
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
 }

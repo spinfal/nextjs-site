@@ -5,6 +5,6 @@ const nextConfig = {
   images: {
     domains: ['cdn.spin.rip', 'cdn.discordapp.com', 'i.scdn.co']
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
