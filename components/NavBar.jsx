@@ -5,6 +5,7 @@ const navigation = [
   { name: 'github', href: 'https://github.com/spinfal', target: '_blank', current: false },
   { name: 'twitter', href: 'https://twitter.com/spinfal', target: '_blank', current: false },
   { name: 'refind', href: 'https://lnk.spin.rip/refind', target: '_blank', current: false },
+  { name: 'e-z.bio', href: 'https://e-z.bio/spin', target: '_blank', current: false },
   { name: 'discord', href: 'https://lnk.spin.rip/ourescape', target: '_blank', current: false },
   { name: 'email', href: 'mailto:public@spin.rip', target: '_blank', current: false },
 ];
