@@ -2,6 +2,7 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 
 const navigation = [
+  { name: 'status', href: 'https://lnk.spin.rip/status', target: '_blank', current: false },
   { name: 'github', href: 'https://github.com/spinfal', target: '_blank', current: false },
   { name: 'twitter', href: 'https://twitter.com/spinfal', target: '_blank', current: false },
   { name: 'refind', href: 'https://lnk.spin.rip/refind', target: '_blank', current: false },
