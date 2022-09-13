@@ -4,9 +4,8 @@
 
 :root {
   --color-primary: #111;
-  --color-secondary: rgba(5,5,5,.6);
-  --color-tertiary: rgba(5,5,5,.6);
-
+  --color-secondary: rgba(5, 5, 5, .6);
+  --color-tertiary: rgba(5, 5, 5, .6);
   --color-text-primary: #fff;
   --color-text-secondary: rgb(199, 199, 199);
 }
@@ -14,20 +13,19 @@
 html,
 body {
   color: var(--color-text-primary);
-
   height: 100%;
   /* background-color: var(--color-primary); */
   background-image: url("https://cdn.spin.rip/r/bg2.webp");
   background-repeat: no-repeat;
   background-size: cover;
-
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
   overflow-y: scroll;
   overflow-x: hidden;
-
   animation: fadeInAnimation ease 1.8s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -48,12 +46,11 @@ body {
   word-wrap: break-word;
 }
 
-
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;
   }
-  
+
   100% {
     opacity: 1;
   }
