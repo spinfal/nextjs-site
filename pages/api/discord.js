@@ -18,7 +18,7 @@ export default function handler(req, res) {
     res.end();
   }).catch(err => {
     console.log(err);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({error: 'Internal Server Error'});
     res.end();
   });
 }

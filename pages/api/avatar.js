@@ -6,10 +6,10 @@ export default function handler(req, res) {
       'User-Agent': 'Mozilla/5.0',
     }
   }).then(response => response.json()).then(async data => {
-    res.redirect(`https://cdn.discordapp.com/avatars/${data.data.discord_user.id}/${data.data.discord_user.avatar}.${data.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png'}${req.query.size ? `?size=${req.query.size}` : ''}`);
+    res.redirect(`https://cdn.discordapp.com/avatars/${ data.data.discord_user.id }/${ data.data.discord_user.avatar }.${ data.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png' }${ req.query.size ? `?size=${ req.query.size }` : '' }`);
   }).catch(err => {
     console.log(err);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({error: 'Internal Server Error'});
     res.end();
   });
 }

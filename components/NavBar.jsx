@@ -1,14 +1,14 @@
-import { Disclosure } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import {Disclosure} from '@headlessui/react';
+import {MenuIcon, XIcon} from '@heroicons/react/outline';
 
 const navigation = [
-  { name: 'status', href: 'https://lnk.spin.rip/status', target: '_blank', current: false },
-  { name: 'github', href: 'https://lnk.spin.rip/github', target: '_blank', current: false },
-  { name: 'twitter', href: 'https://lnk.spin.rip/twitter', target: '_blank', current: false },
-  { name: 'honey', href: 'https://lnk.spin.rip/honey', target: '_blank', current: false },
-  { name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', target: '_blank', current: false },
-  { name: 'discord', href: 'https://lnk.spin.rip/ourescape', target: '_blank', current: false },
-  { name: 'email', href: 'mailto:public@spin.rip?subject=spin.rip - Your subject here', target: '_blank', current: false },
+  {name: 'status', href: 'https://lnk.spin.rip/status', target: '_blank', current: false},
+  {name: 'github', href: 'https://lnk.spin.rip/github', target: '_blank', current: false},
+  {name: 'twitter', href: 'https://lnk.spin.rip/twitter', target: '_blank', current: false},
+  {name: 'honey', href: 'https://lnk.spin.rip/honey', target: '_blank', current: false},
+  {name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', target: '_blank', current: false},
+  {name: 'discord', href: 'https://lnk.spin.rip/ourescape', target: '_blank', current: false},
+  {name: 'email', href: 'mailto:public@spin.rip?subject=spin.rip - Your subject here', target: '_blank', current: false},
 ];
 
 function classNames(...classes) {
@@ -18,7 +18,7 @@ function classNames(...classes) {
 export default function NavBar() {
   return (
     <Disclosure as='nav' className='bg-black/50 sm:bg-black/25 sticky top-0'>
-      {({ open }) => (
+      {({open}) => (
         <>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-between h-16'>
