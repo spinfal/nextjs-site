@@ -1,5 +1,6 @@
 import {Disclosure} from '@headlessui/react';
 import {MenuIcon, XIcon} from '@heroicons/react/outline';
+import Link from 'next/link';
 
 const navigation = [
   {name: 'status', href: 'https://lnk.spin.rip/status', target: '_blank', current: false},
@@ -8,7 +9,7 @@ const navigation = [
   {name: 'honey', href: 'https://lnk.spin.rip/honey', target: '_blank', current: false},
   {name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', target: '_blank', current: false},
   {name: 'discord', href: 'https://lnk.spin.rip/ourescape', target: '_blank', current: false},
-  {name: 'email', href: 'mailto:public@spin.rip?subject=spin.rip - Your subject here', target: '_blank', current: false},
+  {name: 'email', href: '/email', current: false},
 ];
 
 function classNames(...classes) {
@@ -17,7 +18,7 @@ function classNames(...classes) {
 
 export default function NavBar() {
   return (
-    <Disclosure as='nav' className='bg-black/50 sm:bg-black/25 sticky top-0'>
+    <Disclosure as='nav' className='bg-black/50 sm:bg-black/25 sticky top-0 z-50'>
       {({open}) => (
         <>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
@@ -34,36 +35,38 @@ export default function NavBar() {
                 </Disclosure.Button>
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='flex-shrink-0 flex items-center'>
-                  <img
-                    className='block lg:hidden h-8 w-auto'
-                    src='https://cdn.spin.rip/r/spinfal-S.png'
-                    alt='spinfal'
-                    draggable='false'
-                  />
-                  <img
-                    className='hidden lg:block h-8 w-auto'
-                    src='https://cdn.spin.rip/r/spinfal.png'
-                    alt='spinfal'
-                    draggable='false'
-                  />
-                </div>
+                <Link href='/' className='flex-shrink-0 flex items-center'>
+                  <div className='flex-shrink-0 flex items-center cursor-pointer'>
+                    <img
+                      className='block lg:hidden h-8 w-auto'
+                      src='https://cdn.spin.rip/r/spinfal-S.png'
+                      alt='spinfal'
+                      draggable='false'
+                    />
+                    <img
+                      className='hidden lg:block h-8 w-auto'
+                      src='https://cdn.spin.rip/r/spinfal.png'
+                      alt='spinfal'
+                      draggable='false'
+                    />
+                  </div>
+                </Link>
                 <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-4'>
                     {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        target={item.target}
-                        rel='noreferrer nofollow'
-                        className={classNames(
-                          item.current ? 'bg-black/50 text-white' : 'text-gray-300 hover:bg-black/50 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
+                      <Link href={item.href} key={item.name}>
+                        <a
+                          target={item.target}
+                          rel='noreferrer nofollow'
+                          className={classNames(
+                            item.current ? 'bg-black/50 text-white' : 'text-gray-300 hover:bg-black/50 hover:text-white',
+                            'px-3 py-2 rounded-md text-sm font-medium'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}
+                        >
+                          {item.name}
+                        </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
