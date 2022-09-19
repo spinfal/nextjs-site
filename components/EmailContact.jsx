@@ -24,12 +24,14 @@ export default function EmailContact() {
         .then((result) => {
           console.log(result.text);
           toast('email sent!', toastProps);
+          const emailDiv = document.getElementById('email-data');
+          emailDiv.innerHTML = 'thanks for your email! i\'ll get back to you as soon as i can.';
         }, (error) => {
           console.log(error.text);
-          toast('something went wrong!', {...toastProps, icon: '❌'});
+          toast(error.text.includes('g-recaptcha-response') ? 'you must complete the captcha' : 'something went wrong!', {...toastProps, icon: '❌'});
         });
     } else {
-      toast('something went wrong!', {...toastProps, icon: '❌'});
+      toast('i don\'t trust you', {...toastProps, icon: '❌'});
       console.error('Email not sent, form not trusted.');
     }
   };
@@ -38,10 +40,11 @@ export default function EmailContact() {
     <form ref={form} className='flex justify-center basis-1/2 w-60 lg:w-auto' onSubmit={sendEmail}>
       <fieldset>
         <legend className='text-center text-2xl font-bold mb-5'>contact form</legend>
-        <div className='grid grid-cols-1 grid-rows-auto gap-4'>
-          <input type='text' name='from_name' placeholder='Your name' className='px-3 py-2 rounded-md outline-none bg-black/70' />
-          <input type='email' name='reply_to' placeholder='Your email' className='px-3 py-2 rounded-md outline-none bg-black/70' />
-          <textarea name='message' placeholder='Your message' className='px-3 py-2 rounded-md outline-none bg-black/70' />
+        <div className='grid grid-cols-1 grid-rows-auto gap-4' id='email-data'>
+          <input type='text' name='from_name' placeholder='your name' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
+          <input type='email' name='reply_to' placeholder='your email' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
+          <textarea name='message' placeholder='your message' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
+          <div className='g-recaptcha' data-sitekey='6LduBBEiAAAAAL_hzVQE460sTwHjNhEj3Xdl4b_7'></div>
           <input type='submit' value='send' className='text-gray-300 bg-black/40 hover:bg-black/70 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer' />
         </div>
       </fieldset>
