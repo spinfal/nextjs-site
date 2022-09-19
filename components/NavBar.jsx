@@ -3,12 +3,12 @@ import {MenuIcon, XIcon} from '@heroicons/react/outline';
 import Link from 'next/link';
 
 const navigation = [
-  {name: 'status', href: 'https://lnk.spin.rip/status', target: '_blank', current: false},
-  {name: 'github', href: 'https://lnk.spin.rip/github', target: '_blank', current: false},
-  {name: 'twitter', href: 'https://lnk.spin.rip/twitter', target: '_blank', current: false},
-  {name: 'honey', href: 'https://lnk.spin.rip/honey', target: '_blank', current: false},
-  {name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', target: '_blank', current: false},
-  {name: 'discord', href: 'https://lnk.spin.rip/ourescape', target: '_blank', current: false},
+  {name: 'status', href: 'https://lnk.spin.rip/status', rel: [], target: '_blank', current: false},
+  {name: 'github', href: 'https://lnk.spin.rip/github', rel: [], target: '_blank', current: false},
+  {name: 'twitter', href: 'https://lnk.spin.rip/twitter', rel: [], target: '_blank', current: false},
+  {name: 'honey', href: 'https://lnk.spin.rip/honey', rel: [], target: '_blank', current: false},
+  {name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', rel: [], target: '_blank', current: false},
+  {name: 'discord', href: 'https://lnk.spin.rip/ourescape', rel: [], target: '_blank', current: false},
   {name: 'email', href: '/email', current: false},
 ];
 
@@ -57,7 +57,7 @@ export default function NavBar() {
                       <Link href={item.href} key={item.name}>
                         <a
                           target={item.target}
-                          rel='noreferrer nofollow'
+                          {...(item.rel?.length > 0 ? {rel: item.rel?.join(' ')} : {})}
                           className={classNames(
                             item.current ? 'bg-black/50 text-white' : 'text-gray-300 hover:bg-black/50 hover:text-white',
                             'px-3 py-2 rounded-md text-sm font-medium'
