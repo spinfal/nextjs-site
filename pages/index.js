@@ -34,16 +34,16 @@ export default function Home() {
 
   const discordStatus = (type) => {
     switch (type) {
-      case 'online':
-        return '#3BA55D';
-      case 'idle':
-        return '#FAA81A';
-      case 'dnd':
-        return '#ED4245';
-      case 'offline':
-        return '#747F8D';
-      default:
-        return '#747F8D';
+    case 'online':
+      return '#3BA55D';
+    case 'idle':
+      return '#FAA81A';
+    case 'dnd':
+      return '#ED4245';
+    case 'offline':
+      return '#747F8D';
+    default:
+      return '#747F8D';
     }
   };
 
@@ -124,14 +124,14 @@ export default function Home() {
               <Activities activities={discord?.data?.activities} />
             </div>
           ) || (
-              <div key='loading' className='flex justify-center'>
-                <div className='flex flex-col gap-12'>
-                  <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
-                    <p>loading spin's discord data...<br />taking too long? <Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
-                  </div>
+            <div key='loading' className='flex justify-center'>
+              <div className='flex flex-col gap-12'>
+                <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
+                  <p>loading spin's discord data...<br />taking too long? <Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
                 </div>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </main>
     </>
