@@ -1,6 +1,6 @@
 import {Disclosure} from '@headlessui/react';
 import {MenuIcon, XIcon} from '@heroicons/react/outline';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const navigation = [
   {name: 'status', href: 'https://lnk.spin.rip/status', rel: [], target: '_blank', current: false},
@@ -35,7 +35,7 @@ export default function NavBar() {
                 </Disclosure.Button>
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                <Link href='/' className='flex-shrink-0 flex items-center'>
+                <a href='/' className='flex-shrink-0 flex items-center'>
                   <div className='flex-shrink-0 flex items-center cursor-pointer'>
                     <img
                       className='block lg:hidden h-8 w-auto'
@@ -50,23 +50,23 @@ export default function NavBar() {
                       draggable='false'
                     />
                   </div>
-                </Link>
+                </a>
                 <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-4'>
                     {navigation.map((item) => (
-                      <Link href={item.href} key={item.name}>
-                        <a
-                          target={item.target}
-                          {...(item.rel?.length > 0 ? {rel: item.rel?.join(' ')} : {})}
-                          className={classNames(
-                            item.current ? 'bg-black/50 text-white' : 'text-gray-300 hover:bg-black/50 hover:text-white',
-                            'px-3 py-2 rounded-md text-sm font-medium'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}
-                        >
-                          {item.name}
-                        </a>
-                      </Link>
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        target={item.target}
+                        {...(item.rel?.length > 0 ? {rel: item.rel?.join(' ')} : {})}
+                        className={classNames(
+                          item.current ? 'bg-black/50 text-white' : 'text-gray-300 hover:bg-black/50 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
                     ))}
                   </div>
                 </div>
