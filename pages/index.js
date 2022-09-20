@@ -32,6 +32,21 @@ export default function Home() {
     },
   };
 
+  const discordStatus = (type) => {
+    switch (type) {
+      case 'online':
+        return '#3BA55D';
+      case 'idle':
+        return '#FAA81A';
+      case 'dnd':
+        return '#ED4245';
+      case 'offline':
+        return '#747F8D';
+      default:
+        return '#747F8D';
+    }
+  };
+
   return (
     <>
       <Head>
@@ -66,7 +81,7 @@ export default function Home() {
           {discord && (
             <div key='profile-data' className='flex flex-col gap-12'>
               {/* discord data */}
-              <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
+              <div className={`flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out outline outline-2 outline-[${ discordStatus(discord?.data?.discord_status) }]/25 hover:outline-[${ discordStatus(discord?.data?.discord_status) }]/50`}>
                 <div className='flex flex-col gap-6'>
                   <div className='flex justify-center'>
                     <Image src={`https://cdn.discordapp.com/avatars/${ discord.data.discord_user.id }/${ discord.data.discord_user.avatar }.${ discord.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png' }?size=512`} width={128} height={128} className='rounded-full' draggable='false' title='discord avatar' alt='discord avatar' />
@@ -109,14 +124,14 @@ export default function Home() {
               <Activities activities={discord?.data?.activities} />
             </div>
           ) || (
-            <div key='loading' className='flex justify-center'>
-              <div className='flex flex-col gap-12'>
-                <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
-                  <p>it seems like there was an issue while fetching spin's discord data.<br /><Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
+              <div key='loading' className='flex justify-center'>
+                <div className='flex flex-col gap-12'>
+                  <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
+                    <p>loading spin's discord data...<br />taking too long? <Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
         </div>
       </main>
     </>
