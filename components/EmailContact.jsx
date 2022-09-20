@@ -1,3 +1,7 @@
+/*
+  This is all optional. If you don't wish to use EmailJS, you can simply make the "email" href a mailto: link or anything else.
+*/
+
 import emailjs from '@emailjs/browser';
 import {useRef} from 'react';
 import EmailJS from '../email.config.js';

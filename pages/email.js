@@ -1,3 +1,7 @@
+/*
+  This is all optional. If you don't wish to use EmailJS, you can simply make the "email" href a mailto: link or anything else.
+*/
+
 import Head from 'next/head';
 import Script from 'next/script';
 import {Toaster} from 'react-hot-toast';
