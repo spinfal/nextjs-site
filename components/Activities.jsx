@@ -1,0 +1,27 @@
+import Image from 'next/image';
+
+export default function Activities(props) {
+  const {activities} = props;
+  return (
+    <>
+      {activities.filter(i => i.name !== 'Custom Status').filter(i => i.name !== 'Spotify').map((activity) => (
+        <div className='flex basis-1/2 flex-col lg:flex-row p-6 gap-6 lg:gap-12 lg:p-12 spotify-container rounded-3xl hover:rounded-2xl transition-all duration-300 ease-in-out' key={activity.application_id}>
+          <div className='flex items-center justify-center'>
+            <Image src={'https://' + (!/[0-9]{18,19}/.test(activity?.assets?.large_image) ? activity?.assets?.large_image.match(/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/gmi) : `cdn.discordapp.com/app-assets/${ activity.application_id }/${ activity?.assets?.large_image }.png`)} width={90} height={90} className='rounded-lg' draggable='false' title={activity?.assets?.large_text} alt={activity?.assets?.large_text} />
+          </div>
+          <div className='flex justify-center items-center'>
+            <div className='grid grid-cols-1 grid-rows-2 gap-6'>
+              <div className='flex flex-row gap-2 items-center'>
+                <p>{activity.name}</p>
+              </div>
+              <div className='flex flex-col'>
+                {activity?.details && <p className='text-sm'><em>{activity.details}</em></p>}
+                {activity?.state && <p className='text-sm'><em className='font-semibold'>{activity.state}</em></p>}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </>
+  );
+}
