@@ -1,6 +1,6 @@
 import {Disclosure} from '@headlessui/react';
 import {MenuIcon, XIcon} from '@heroicons/react/outline';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 const navigation = [
   {name: 'status', href: 'https://lnk.spin.rip/status', rel: [], target: '_blank', current: false},
@@ -35,7 +35,7 @@ export default function NavBar() {
                 </Disclosure.Button>
               </div>
               <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                <a href='/' className='flex-shrink-0 flex items-center'>
+                <Link href='/' className='flex-shrink-0 flex items-center'>
                   <div className='flex-shrink-0 flex items-center cursor-pointer'>
                     <img
                       className='block lg:hidden h-8 w-auto'
@@ -50,7 +50,7 @@ export default function NavBar() {
                       draggable='false'
                     />
                   </div>
-                </a>
+                </Link>
                 <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-4'>
                     {navigation.map((item) => (
