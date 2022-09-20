@@ -74,9 +74,16 @@ export default function Home() {
                   <div className='flex justify-center'>
                     <p className='flex flex-row items-center gap-2 tracking-wider cursor-pointer select-text hover:text-blue-400 transition duration-300 ease-in-out' onClick={() => navigator.clipboard.writeText(`${ discord.data.discord_user.username }#${ discord.data.discord_user.discriminator }`).then(() => toast('copied username to clipboard!', toastProps))}>{`${ discord.data.discord_user.username }#${ discord.data.discord_user.discriminator }`} <ClipboardCopyIcon className='flex-none h-4 w-4 cursor-pointer' /></p>
                   </div>
-                  <div className='flex justify-center'>
-                    <p className='italic p-3 bg-black/50 discord-status w-48 rounded-md'>{discord?.data?.activities.filter(i => i.name == 'Custom Status')[0]?.state ?? 'spin doesn\'t have a custom status set'}</p>
-                  </div>
+                  {discord?.data?.activities.filter(i => i.name == 'Custom Status')[0] && <div className='flex justify-center'>
+                    <div className='italic p-3 bg-black/50 discord-status rounded-md'>
+                      <div className='grid w-auto justify-center items-center'>
+                        <div>
+                          {discord?.data?.activities.filter(i => i.name == 'Custom Status')[0]?.emoji?.name && <Image src={`https://cdn.discordapp.com/emojis/${ discord?.data?.activities.filter(i => i.name == 'Custom Status')[0]?.emoji.id }.${ discord?.data?.activities.filter(i => i.name == 'Custom Status')[0]?.emoji?.animated ? 'gif' : 'png' }?size=96`} width={48} height={48} className='rounded-sm' draggable={false} />}
+                        </div>
+                        {discord?.data?.activities.filter(i => i.name == 'Custom Status')[0]?.state && <p>{discord?.data?.activities.filter(i => i.name == 'Custom Status')[0]?.state}</p>}
+                      </div>
+                    </div>
+                  </div>}
                 </div>
               </div>
 
@@ -102,14 +109,14 @@ export default function Home() {
               <Activities activities={discord?.data?.activities} />
             </div>
           ) || (
-            <div key='loading' className='flex justify-center'>
-              <div className='flex flex-col gap-12'>
-                <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
-                  <p>it seems like there was an issue while fetching spin's discord data.<br /><Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
+              <div key='loading' className='flex justify-center'>
+                <div className='flex flex-col gap-12'>
+                  <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
+                    <p>it seems like there was an issue while fetching spin's discord data.<br /><Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
+            )}
         </div>
       </main>
     </>
