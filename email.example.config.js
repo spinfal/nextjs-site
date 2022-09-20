@@ -3,9 +3,9 @@
 */
 
 const EmailJS = {
-  "EMAILJS_SERVICE_ID": "service_id",
-  "EMAILJS_TEMPLATE_ID": "template_id",
-  "EMAILJS_PUBLIC_KEY": "publicKey"
+  'EMAILJS_SERVICE_ID': 'service_id',
+  'EMAILJS_TEMPLATE_ID': 'template_id',
+  'EMAILJS_PUBLIC_KEY': 'publicKey'
 };
 
 module.exports = EmailJS;

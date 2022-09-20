@@ -98,14 +98,14 @@ export default function Home() {
               </div>
             </div>
           ) || (
-              <div key='loading' className='flex justify-center'>
-                <div className='flex flex-col gap-12'>
-                  <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
-                    <p>it seems like there was an issue while fetching spin's discord data.<br /><Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
-                  </div>
+            <div key='loading' className='flex justify-center'>
+              <div className='flex flex-col gap-12'>
+                <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
+                  <p>it seems like there was an issue while fetching spin's discord data.<br /><Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
                 </div>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </main>
     </>

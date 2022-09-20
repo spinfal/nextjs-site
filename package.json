@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "eslint --ext js --ext jsx . --fix && next build",
     "start": "next start",
+    "lint-fix": "eslint --ext js --ext jsx . --fix",
     "lint": "next lint"
   },
   "dependencies": {
