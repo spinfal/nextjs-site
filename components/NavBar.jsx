@@ -6,7 +6,7 @@ const navigation = [
   {name: 'status', href: 'https://lnk.spin.rip/status', rel: [], target: '_blank', current: false},
   {name: 'github', href: 'https://lnk.spin.rip/github', rel: [], target: '_blank', current: false},
   {name: 'twitter', href: 'https://lnk.spin.rip/twitter', rel: [], target: '_blank', current: false},
-  {name: 'honey', href: 'https://lnk.spin.rip/honey', rel: [], target: '_blank', current: false},
+  {name: 'coffee', href: 'https://lnk.spin.rip/totmcoffee', rel: [], target: '_blank', current: false},
   {name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', rel: [], target: '_blank', current: false},
   {name: 'discord', href: 'https://lnk.spin.rip/ourescape', rel: [], target: '_blank', current: false},
   {name: 'email', href: '/email', current: false},
