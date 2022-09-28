@@ -2,6 +2,7 @@
 
 # email config
 /email.config.js
+/pages/api/webhook.js
 
 # dependencies
 /node_modules
