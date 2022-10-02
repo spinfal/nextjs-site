@@ -49,7 +49,7 @@ export default function EmailContact() {
           <input type='email' name='reply_to' placeholder='your email' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
           <textarea name='message' placeholder='your message' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
           <div className='g-recaptcha' data-theme='dark' data-sitekey='6LfkvREiAAAAAMBF6xTtPCKBtebmfRBxUGBafmr1'></div>
-          <input type='submit' value='send' onClick={() => toast('sending email...', {...toastProps, icon: '📤'})} className='text-gray-300 bg-black/40 hover:bg-black/70 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer' />
+          <input type='submit' value='send' onClick={() => toast('sending email...', {...toastProps, icon: '📤'})} className='text-gray-300 bg-black/40 hover:bg-black/70 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer umami--click--send-email' />
         </div>
       </fieldset>
     </form>

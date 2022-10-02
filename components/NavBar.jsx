@@ -61,7 +61,7 @@ export default function NavBar() {
                         {...(item.rel?.length > 0 ? {rel: item.rel?.join(' ')} : {})}
                         className={classNames(
                           item.current ? 'bg-black/50 text-white' : 'text-gray-300 hover:bg-black/50 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-sm font-medium ' + `umami--contextmenu--nav-${item.name}-context umami--click--nav-${item.name}-click`
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
