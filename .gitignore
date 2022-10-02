@@ -3,6 +3,7 @@
 # email config
 /email.config.js
 /pages/api/webhook.js
+/public/google14e472f7574c3382.html
 
 # dependencies
 /node_modules

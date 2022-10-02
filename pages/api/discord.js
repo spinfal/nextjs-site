@@ -1,12 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 const allowedDomains = [
-  'https://spin.rip/',
-  'https://www.spin.rip/',
-  'http://localhost:3000/',
+  'spin.rip',
+  'www.spin.rip',
+  'localhost:3000',
 ];
 
 export default function handler(req, res) {
-  if (allowedDomains.indexOf(req.headers.referer) === -1) return res.status(418).send('i\'m a smol teapot.');
+  if (allowedDomains.indexOf(req.headers.host) === -1) return res.status(418).send('i\'m a smol teapot.');
 
   fetch('https://api.lanyard.rest/v1/users/308440976723148800', {
     method: 'GET',
