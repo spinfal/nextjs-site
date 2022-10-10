@@ -5,6 +5,9 @@
 /pages/api/webhook.js
 /public/google14e472f7574c3382.html
 
+# private
+/pages/private
+
 # dependencies
 /node_modules
 /.pnp
