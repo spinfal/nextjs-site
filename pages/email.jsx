@@ -6,8 +6,8 @@ import Head from 'next/head';
 import Script from 'next/script';
 import {Toaster} from 'react-hot-toast';
 
-import NavBar from '../components/NavBar';
 import EmailContact from '../components/EmailContact';
+import NavBar from '../components/NavBar';
 
 export default function Email() {
   return (

@@ -22,3 +22,12 @@ export default function handler(req, res) {
     res.end();
   });
 }
+
+export const config = {
+  api: {
+    externalResolver: true,
+    bodyParser: {
+      sizeLimit: '0kb',
+    },
+  },
+};

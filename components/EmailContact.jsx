@@ -4,8 +4,8 @@
 
 import emailjs from '@emailjs/browser';
 import {useRef} from 'react';
-import EmailJS from '../email.config.js';
 import toast from 'react-hot-toast';
+import EmailJS from '../email.config.js';
 
 const toastProps = {
   icon: '🤍',
