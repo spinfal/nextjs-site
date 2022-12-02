@@ -37,7 +37,6 @@ export default function Email() {
         <meta name='twitter:description' content='a home for spin and other things' />
         <meta name='twitter:image' content='https://cdn.spin.rip/r/spinfal-large.png' />
       </Head>
-      <Script async defer data-website-id="c994bfcb-a471-4a83-8fbe-3ad0e17b4957" src='https://collect.spin.rip/umami.js'></Script>
       <div><Toaster /></div>
       <NavBar />
       <main className='flex justify-center'>
