@@ -15,7 +15,7 @@ body {
   color: var(--color-text-primary);
   height: 100%;
   /* background-color: var(--color-primary); */
-  background-image: url("https://cdn.spin.rip/r/bg2.webp");
+  background-image: url("https://projects.spin.rip/spin.rip/spinfal-background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-user-select: none;

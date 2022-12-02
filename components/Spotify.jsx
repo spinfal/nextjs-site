@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import toast from 'react-hot-toast';
 
-export default function Activities(props) {
+export default function Spotify(props) {
   return (
     <>
       <div className='flex items-center justify-center'>
