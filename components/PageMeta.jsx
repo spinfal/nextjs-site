@@ -5,11 +5,12 @@ export default function PageMeta(props) {
       <meta name='title' content={props?.title ? props.title : 'spin (dot) rip'} />
       <meta name='description' content='a home for spin and other things' />
       <meta name='keywords' content='spin, spinfal, minecraft, among us, amogus, spin.rip' />
-      <meta name='robots' content='index, nofollow' />
+      <meta name='robots' content={props?.robots ? props.robots : 'index, nofollow'} />
       <meta name='language' content='English' />
       <meta name='author' content='Spinfal' />
       <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+      <meta name='theme-color' content='#000000' />
 
       <meta name='og:type' content='website' />
       <meta name='og:url' content='https://spin.rip' />
@@ -24,5 +25,5 @@ export default function PageMeta(props) {
       <meta name='twitter:description' content='a home for spin and other things' />
       <meta name='twitter:image' content='https://projects.spin.rip/spin.rip/spinfal.png' />
     </>
-  )
+  );
 }

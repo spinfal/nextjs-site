@@ -3,13 +3,12 @@ import {MenuIcon, XIcon} from '@heroicons/react/outline';
 import Link from 'next/link';
 
 const navigation = [
-  {name: 'status', href: 'https://lnk.spin.rip/status', rel: [], target: '_blank', current: false},
-  {name: 'github', href: 'https://lnk.spin.rip/github', rel: [], target: '_blank', current: false},
-  {name: 'twitter', href: 'https://lnk.spin.rip/twitter', rel: [], target: '_blank', current: false},
-  {name: 'anime', href: 'https://lnk.spin.rip/anime', rel: [], target: '_blank', current: false},
-  {name: 'fetch', href: 'https://lnk.spin.rip/fetchrewards', rel: [], target: '_blank', current: false},
-  {name: 'e-z.bio', href: 'https://lnk.spin.rip/ezbio', rel: [], target: '_blank', current: false},
-  {name: 'discord', href: 'https://lnk.spin.rip/ourescape', rel: [], target: '_blank', current: false},
+  {name: 'status', href: 'https://out.spin.rip/status', rel: [], target: '_blank', current: false},
+  {name: 'github', href: 'https://out.spin.rip/github', rel: [], target: '_blank', current: false},
+  {name: 'twitter', href: 'https://out.spin.rip/twitter', rel: [], target: '_blank', current: false},
+  {name: 'fetch', href: 'https://out.spin.rip/fetch', rel: [], target: '_blank', current: false},
+  {name: 'e-z.bio', href: 'https://out.spin.rip/ez', rel: [], target: '_blank', current: false},
+  {name: 'discord', href: 'https://out.spin.rip/discord', rel: [], target: '_blank', current: false},
   {name: 'email', href: '/email', current: false},
 ];
 
