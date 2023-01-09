@@ -71,6 +71,9 @@ export default function NavBar() {
                   </div>
                 </div>
               </div>
+              <img src='https://projects.spin.rip/spin.rip/penguin.png' className='w-0 md:w-12 hover:animate-pulse cursor-pointer' loading='lazy' onClick={() => {
+                document.getElementById('peng').classList.toggle('hidden')
+              }} draggable='false' title='penguin' alt='penguin' />
             </div>
           </div>
 
@@ -90,6 +93,9 @@ export default function NavBar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+              <img src='https://projects.spin.rip/spin.rip/penguin.png' className='w-10 md:w-0 hover:animate-pulse cursor-pointer' loading='lazy' onClick={() => {
+                document.getElementById('peng').classList.toggle('hidden')
+              }} draggable='false' title='penguin' alt='penguin' />
             </div>
           </Disclosure.Panel>
         </>
