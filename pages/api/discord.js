@@ -2,6 +2,7 @@
 const allowedDomains = [
   'spin.rip',
   'www.spin.rip',
+  'development.spin.rip',
   'localhost:3000',
 ];
 
