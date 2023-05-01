@@ -94,7 +94,7 @@ export default function Home() {
                 <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
                   <div className='flex flex-col items-center gap-1'>
                     <p className='flex flex-row items-center gap-1'><CogIcon className='flex-none h-4 w-4 animate-spin' />loading spin's discord data...</p>
-                    <p>taking too long? <Link href={'https://lnk.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>
+                    {/*<p>taking too long? <Link href={'https://out.spin.rip/status'}><a className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a></Link>.</p>*/}
                   </div>
                 </div>
               </div>
