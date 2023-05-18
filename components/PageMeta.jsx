@@ -5,7 +5,7 @@ export default function PageMeta(props) {
       <meta name='title' content={props?.title ? props.title : 'spin (dot) rip'} />
       <meta name='description' content='a home for spin and other things' />
       <meta name='keywords' content='spin, spinfal, minecraft, among us, amogus, spin.rip' />
-      <meta name='robots' content={props?.robots ? props.robots : 'index, nofollow'} />
+      <meta name='robots' content={props?.robots ? props.robots : 'index, follow'} />
       <meta name='language' content='English' />
       <meta name='author' content='Spinfal' />
       <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
