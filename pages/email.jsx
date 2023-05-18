@@ -6,9 +6,9 @@ import Head from 'next/head';
 import Script from 'next/script';
 import {Toaster} from 'react-hot-toast';
 
-import PageMeta from '../components/PageMeta';
 import EmailContact from '../components/EmailContact';
 import NavBar from '../components/NavBar';
+import PageMeta from '../components/PageMeta';
 
 export default function Email() {
   return (
@@ -17,6 +17,7 @@ export default function Email() {
         <title>email - spin (dot) rip</title>
         <PageMeta title={'email - spin (dot) rip'} />
       </Head>
+      <Script src='oneko.js' />
       <div><Toaster /></div>
       <NavBar />
       <main className='flex justify-center'>

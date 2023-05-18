@@ -1,14 +1,14 @@
 import {ClipboardCopyIcon, CogIcon} from '@heroicons/react/outline';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import React, {useEffect, useState} from 'react';
 import toast, {Toaster} from 'react-hot-toast';
 // import styles from '../styles/Home.module.css'
 
-import PageMeta from '../components/PageMeta';
+import Script from 'next/script';
 import Activities from '../components/Activities';
 import NavBar from '../components/NavBar';
+import PageMeta from '../components/PageMeta';
 import Spotify from '../components/Spotify';
 
 export default function Home() {
@@ -51,6 +51,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <PageMeta />
       </Head>
+      <Script src='oneko.js' />
       <div><Toaster /></div>
       <NavBar />
       <main className='flex justify-center'>
