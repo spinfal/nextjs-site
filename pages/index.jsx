@@ -61,12 +61,11 @@ export default function Home() {
               {/* discord data */}
               <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
                 <div className='flex flex-col gap-6 items-center'>
-                  <img src='https://projects.spin.rip/spin.rip/penguin.png' className='hidden animate-spin w-12' draggable='false' id='peng' />
                   <div className='flex justify-center'>
                     <Image src={`https://cdn.discordapp.com/avatars/${ discord.data.discord_user.id }/${ discord.data.discord_user.avatar }.${ discord.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png' }?size=512`} width={128} height={128} className='rounded-full' draggable='false' title='discord avatar' alt='discord avatar' />
                   </div>
                   <div className='flex justify-center'>
-                    <p className='flex flex-row items-center gap-2 tracking-wider cursor-pointer select-text hover:text-blue-400 transition duration-300 ease-in-out' onClick={() => navigator.clipboard.writeText(`${ discord.data.discord_user.username }#${ discord.data.discord_user.discriminator }`).then(() => toast('copied username to clipboard!', toastProps))}>{`${ discord.data.discord_user.username }#${ discord.data.discord_user.discriminator }`} <ClipboardCopyIcon className='flex-none h-4 w-4 cursor-pointer' /></p>
+                    <p className='flex flex-row items-center gap-2 tracking-wider cursor-pointer select-text hover:text-blue-400 transition duration-300 ease-in-out' onClick={() => navigator.clipboard.writeText(`${ discord.data.discord_user.username }`).then(() => toast('copied username to clipboard!', toastProps))}>{`${ discord.data.discord_user.username }`} <ClipboardCopyIcon className='flex-none h-4 w-4 cursor-pointer' /></p>
                   </div>
                   {discord?.data?.activities.filter(i => i.name == 'Custom Status')[0] && <div className='flex justify-center'>
                     <div className='italic p-3 bg-black/50 discord-status rounded-md'>

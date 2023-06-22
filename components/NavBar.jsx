@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const navigation = [
   //{name: 'status', href: 'https://out.spin.rip/status', rel: [], target: '_blank', current: false},
+  // {name: 'nitronexus', href: 'https://out.spin.rip/nitronexus', rel: [], target: '_blank', current: false},
   {name: 'github', href: 'https://out.spin.rip/github', rel: [], target: '_blank', current: false},
   {name: 'twitter', href: 'https://out.spin.rip/twitter', rel: [], target: '_blank', current: false},
   {name: 'privacy', href: 'https://out.spin.rip/privacy', rel: [], target: '_blank', current: false},
-  {name: 'fetch', href: 'https://out.spin.rip/fetch', rel: [], target: '_blank', current: false},
   {name: 'discord', href: 'https://out.spin.rip/discord', rel: [], target: '_blank', current: false},
   {name: 'email', href: '/email', current: false},
 ];
@@ -71,9 +71,6 @@ export default function NavBar() {
                   </div>
                 </div>
               </div>
-              <img src='https://projects.spin.rip/spin.rip/penguin.png' className='w-0 md:w-12 hover:animate-pulse cursor-pointer' loading='lazy' onClick={() => {
-                document.getElementById('peng').classList.toggle('hidden');
-              }} draggable='false' title='penguin' alt='penguin' />
             </div>
           </div>
 
@@ -93,9 +90,6 @@ export default function NavBar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
-              <img src='https://projects.spin.rip/spin.rip/penguin.png' className='w-10 md:w-0 hover:animate-pulse cursor-pointer' loading='lazy' onClick={() => {
-                document.getElementById('peng').classList.toggle('hidden');
-              }} draggable='false' title='penguin' alt='penguin' />
             </div>
           </Disclosure.Panel>
         </>
