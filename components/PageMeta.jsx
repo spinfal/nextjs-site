@@ -16,14 +16,14 @@ export default function PageMeta(props) {
       <meta name='og:url' content='https://spin.rip' />
       <meta name='og:title' content={props?.title ? props.title : 'spin (dot) rip'} />
       <meta name='og:description' content='a home for spin and other things' />
-      <meta name='og:image' content='https://projects.spin.rip/spin.rip/spinfal-large.png' />
+      <meta name='og:image' content='https://storage.spin.rip/projects/spin.rip/spinfal-large.png' />
 
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:site' content='@Spinfal' />
       <meta name='twitter:url' content='https://spin.rip' />
       <meta name='twitter:title' content={props?.title ? props.title : 'spin (dot) rip'} />
       <meta name='twitter:description' content='a home for spin and other things' />
-      <meta name='twitter:image' content='https://projects.spin.rip/spin.rip/spinfal.png' />
+      <meta name='twitter:image' content='https://storage.spin.rip/projects/spin.rip/spinfal.png' />
     </>
   );
 }

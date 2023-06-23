@@ -39,13 +39,13 @@ export default function NavBar() {
                   <div className='flex-shrink-0 flex items-center cursor-pointer'>
                     <img
                       className='block lg:hidden h-8 w-auto'
-                      src='https://projects.spin.rip/spin.rip/spinfal-S.png'
+                      src='https://storage.spin.rip/projects/spin.rip/spinfal-S.png'
                       alt='spinfal'
                       draggable='false'
                     />
                     <img
                       className='hidden lg:block h-8 w-auto'
-                      src='https://projects.spin.rip/spin.rip/spinfal.png'
+                      src='https://storage.spin.rip/projects/spin.rip/spinfal.png'
                       alt='spinfal'
                       draggable='false'
                     />
