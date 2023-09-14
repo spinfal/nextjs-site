@@ -3,8 +3,7 @@ import {MenuIcon, XIcon} from '@heroicons/react/outline';
 import Link from 'next/link';
 
 const navigation = [
-  //{name: 'status', href: 'https://out.spin.rip/status', rel: [], target: '_blank', current: false},
-  // {name: 'nitronexus', href: 'https://out.spin.rip/nitronexus', rel: [], target: '_blank', current: false},
+  {name: 'status', href: 'https://out.spin.rip/status', rel: [], target: '_blank', current: false},
   {name: 'github', href: 'https://out.spin.rip/github', rel: [], target: '_blank', current: false},
   {name: 'twitter', href: 'https://out.spin.rip/twitter', rel: [], target: '_blank', current: false},
   {name: 'privacy', href: 'https://out.spin.rip/privacy', rel: [], target: '_blank', current: false},
