@@ -44,7 +44,7 @@ export default function EmailContact() {
     <form ref={form} className='flex justify-center basis-1/2 w-60 lg:w-auto' onSubmit={sendEmail}>
       <fieldset>
         <legend className='text-center text-2xl font-bold mb-5'>contact form</legend>
-        <div className='grid grid-cols-1 grid-rows-auto gap-4' id='email-data'>
+        <div className='grid grid-cols-1 gap-4 flex flex-col' id='email-data'>
           <input type='text' name='from_name' placeholder='your name' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
           <input type='email' name='reply_to' placeholder='your email' className='px-3 py-2 rounded-md outline-none bg-black/70' required />
           <textarea name='message' placeholder='your message' className='px-3 py-2 rounded-md outline-none bg-black/70' required />

@@ -12,7 +12,7 @@ const allowedDomains = [
 export default function handler(req, res) {
   if (allowedDomains.indexOf(req.headers.host) === -1) return res.status(418).send(`domain not allowed: ${req.headers.host}`);
 
-  fetch('https://api.lanyard.rest/v1/users/308440976723148800', {
+  fetch('https://manti.vendicated.dev/api/reviewdb/users/308440976723148800/reviews', {
     method: 'GET',
     headers: {
       'User-Agent': 'Mozilla/5.0',
