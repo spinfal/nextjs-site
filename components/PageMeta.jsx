@@ -1,7 +1,7 @@
 export default function PageMeta(props) {
   return (
     <>
-      <meta charset='UTF-8' />
+      <meta charSet='UTF-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       <meta name='HandheldFriendly' content='True' />
       <meta name='title' content={props?.title ? props.title : 'spin (dot) rip'} />
