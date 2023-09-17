@@ -15,7 +15,7 @@ export default function Email() {
     <>
       <Head>
         <title>email - spin (dot) rip</title>
-        <PageMeta title={'email - spin (dot) rip'} />
+        <PageMeta title={'email - spin (dot) rip'} desc={'an easy way to contact me via email, no external app needed.'} />
       </Head>
       <Script src='oneko.js' />
       <div><Toaster /></div>

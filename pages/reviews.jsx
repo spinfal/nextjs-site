@@ -31,7 +31,7 @@ export default function Reviews() {
     <>
       <Head>
         <title>reviews - spin (dot) rip</title>
-        <PageMeta title={'reviews - spin (dot) rip'} />
+        <PageMeta title={'reviews - spin (dot) rip'} desc={'reviews that other users have left under my profile using reviewdb'} />
       </Head>
       <Script src='oneko.js' />
       <NavBar />
