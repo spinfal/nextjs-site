@@ -14,12 +14,15 @@ import Spotify from '../components/Spotify';
 
 export default function Home() {
   const [discord, setDiscord] = useState();
+  const [apiError, setApiError] = useState();
 
   const getApiData = async () => {
-    const response = await fetch('/api/discord').then((response) => {
+    const response = await fetch('/api/discord').then(async (response) => {
       if (response.status === 200) {
         return response.json();
       } else {
+        const errorText = await response.text();
+        setApiError(errorText);
         return null;
       }
     });
@@ -49,7 +52,6 @@ export default function Home() {
     <>
       <Head>
         <title>spin (dot) rip</title>
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <PageMeta />
       </Head>
       <Script src='oneko.js' />
@@ -94,8 +96,17 @@ export default function Home() {
                 <div className='flex flex-col gap-12'>
                   <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
                     <div className='flex flex-col items-center gap-1'>
-                      <p className='flex flex-row items-center gap-1'><CogIcon className='flex-none h-4 w-4 animate-spin' />loading spin's discord data...</p>
-                      <p>taking too long? <a href='https://out.spin.rip/status' className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a>.</p>
+                      {apiError ? (
+                        <p className='text-red-500'>{apiError}</p>
+                      ) : (
+                        <>
+                          <p className='flex flex-row items-center gap-1'>
+                            <CogIcon className='flex-none h-4 w-4 animate-spin' />
+                            loading spin's discord data...
+                          </p>
+                          <p>taking too long? <a href='https://out.spin.rip/status' className='italic font-semibold hover:text-pink-400 transition duration-300 ease-in-out select-text'>check the status page</a>.</p>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>

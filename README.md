@@ -1,7 +1,10 @@
 # HI THERE
+### This code needs to be cleaned and mostly rewritten.
 If you decide to run this in Repl, make sure you run `npm run build` first.
 
 I'm still new at Next.js & React.js, so if you think that this code looks like shit it's because that it is. **I didn't make this to be a template for others**, but it isn't hard to modify and make your own.
+
+The SEO for this website is actually pretty good, just make sure you change the meta tags to your own information.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

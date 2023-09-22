@@ -10,6 +10,7 @@ const allowedDomains = [
 ];
 
 export default function handler(req, res) {
+  // the Host header cannot be modified by the user sending a request (unless someone puts in lots of work, but this isn't that important lol)
   if (allowedDomains.indexOf(req.headers.host) === -1) return res.status(418).send(`domain not allowed: ${req.headers.host}`);
 
   fetch('https://api.lanyard.rest/v1/users/308440976723148800', {
@@ -22,7 +23,7 @@ export default function handler(req, res) {
     res.end();
   }).catch(err => {
     console.log(err);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json(`An error has occurred: ${err}`);
     res.end();
   });
 }
