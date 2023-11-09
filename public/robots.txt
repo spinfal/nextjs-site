@@ -1,37 +1,14 @@
-User-agent: Googlebot
-Disallow: 
-User-agent: googlebot-image
-Disallow: /
-User-agent: googlebot-mobile
-Disallow: 
-User-agent: MSNBot
-Disallow: 
-User-agent: Slurp
-Disallow: 
-User-agent: Teoma
-Disallow: 
-User-agent: Gigabot
-Disallow: 
-User-agent: Robozilla
-Disallow: 
-User-agent: Nutch
-Disallow: 
-User-agent: ia_archiver
-Disallow: 
-User-agent: baiduspider
-Disallow: 
-User-agent: naverbot
-Disallow: 
-User-agent: yeti
-Disallow: 
-User-agent: yahoo-mmcrawler
-Disallow: 
-User-agent: psbot
-Disallow: /
-User-agent: yahoo-blogs/v3.9
-Disallow: 
+# Allow all bots to access the entire site except specified directories
 User-agent: *
-Disallow: 
 Disallow: /cgi-bin/
 Disallow: /api/
-Sitemap: https://www.spin.rip/sitemap.xml
+
+# Disallow specific bots from accessing any part of the site
+User-agent: googlebot-image
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+# Sitemap directive
+Sitemap: https://spin.rip/sitemap.xml

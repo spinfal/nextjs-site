@@ -12,7 +12,7 @@ export default function PageMeta(props) {
       <meta name='author' content='Spinfal' />
       <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
       <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
-      <meta name='theme-color' content='#000000' />
+      <meta name='theme-color' content='#111111' />
 
       <meta name='og:type' content='website' />
       <meta name='og:url' content='https://spin.rip' />

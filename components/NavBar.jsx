@@ -6,7 +6,7 @@ const navigation = [
   { name: 'status', href: 'https://out.spin.rip/status', rel: [], target: '_blank', current: false, useNextRouting: false },
   { name: 'github', href: 'https://out.spin.rip/github', rel: [], target: '_blank', current: false, useNextRouting: false },
   { name: 'twitter', href: 'https://out.spin.rip/twitter', rel: [], target: '_blank', current: false, useNextRouting: false },
-  { name: 'privacy', href: 'https://out.spin.rip/privacy', rel: [], target: '_blank', current: false, useNextRouting: false },
+  { name: 'smspool', href: 'https://out.spin.rip/smspool', rel: [], target: '_blank', current: false, useNextRouting: false },
   { name: 'discord', href: 'https://out.spin.rip/discord', rel: [], target: '_blank', current: false, useNextRouting: false },
   { name: 'reviews', href: '/reviews', current: false, useNextRouting: true },
   { name: 'email', href: '/email', current: false, useNextRouting: false },

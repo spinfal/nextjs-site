@@ -26,7 +26,7 @@ body {
   /* Standard syntax */
   overflow-y: scroll;
   overflow-x: hidden;
-  animation: fadeInAnimation ease 1.8s;
+  animation: fadeInAnimation ease 0.8s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

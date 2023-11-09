@@ -4,6 +4,7 @@ const allowedDomains = [
   'www.spin.rip',
   'spinhome.replit.app',
   'my-site.clit.repl.co',
+  'my-site--clit.repl.co',
   'd-ba9af8c3-ed37-4ec2-9462-406c6f0ca21b-2cptnrxs3q-uc.a.run.app',
   'development.spin.rip',
   'localhost:3000',
