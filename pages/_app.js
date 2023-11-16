@@ -3,7 +3,7 @@
 import '../styles/globals.css';
 
 function SpinSite({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+    return <Component {...pageProps} />;
 }
 
 export default SpinSite;

@@ -9,6 +9,7 @@ const navigation = [
   { name: 'smspool', href: 'https://out.spin.rip/smspool', rel: [], target: '_blank', current: false, useNextRouting: false },
   { name: 'discord', href: 'https://out.spin.rip/discord', rel: [], target: '_blank', current: false, useNextRouting: false },
   { name: 'reviews', href: '/reviews', current: false, useNextRouting: true },
+  { name: 'webhook', href: '/webhook', current: false, useNextRouting: true },
   { name: 'email', href: '/email', current: false, useNextRouting: false },
 ];
 
