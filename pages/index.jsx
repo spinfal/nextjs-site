@@ -54,7 +54,6 @@ export default function Home() {
                 <title>spin (dot) rip</title>
                 <PageMeta />
             </Head>
-            <Script src='oneko.js' />
             <div><Toaster /></div>
             <NavBar />
             <main className='flex justify-center mb-2'>
@@ -65,7 +64,7 @@ export default function Home() {
                             <div className='flex justify-center basis-1/2 flex-col p-6 lg:p-12 discord-container rounded-3xl text-center hover:rounded-2xl transition-all duration-300 ease-in-out'>
                                 <div className='flex flex-col gap-6 items-center'>
                                     <div className='flex justify-center'>
-                                        <Image src={`https://cdn.discordapp.com/avatars/${discord.data.discord_user.id}/${discord.data.discord_user.avatar}.${discord.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png'}?size=512`} width={128} height={128} className='rounded-full' draggable='false' title='discord avatar' alt='discord avatar' />
+                                        <Image src={`https://cdn.discordapp.com/avatars/${discord.data.discord_user.id}/${discord.data.discord_user.avatar}.${discord.data.discord_user.avatar.substring(0, 2) === 'a_' ? 'gif' : 'png'}?size=512`} width={128} height={128} className='rounded-full' draggable='false' title='discord avatar' alt='discord avatar' priority />
                                     </div>
                                     <div className='flex justify-center'>
                                         <p className='flex flex-row items-center gap-2 tracking-wider cursor-pointer select-text hover:text-blue-400 transition duration-300 ease-in-out' onClick={() => navigator.clipboard.writeText(`${discord.data.discord_user.username}`).then(() => toast('copied username to clipboard!', toastProps))}>{`${discord.data.discord_user.username}`} <ClipboardCopyIcon className='flex-none h-4 w-4 cursor-pointer' /></p>

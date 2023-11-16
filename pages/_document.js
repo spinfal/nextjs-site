@@ -6,6 +6,7 @@ class ArcCdn extends Document {
             <Html>
                 <Head>
                     <script async src="https://arc.io/widget.min.js#J9eN1XUc"></script>
+                    <script src='oneko.js' defer />
                 </Head>
                 <body>
                     <Main />
